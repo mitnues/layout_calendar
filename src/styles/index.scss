@@ -1,3 +1,76 @@
 body {
   margin: 0;
 }
+
+.calendar {
+  display: flex;
+  padding: 10px;
+  gap: 1px;
+  align-items: flex-start;
+  height: 400px;
+  width: 700px;
+  flex-flow: wrap;
+
+  $tile-size: 100px;
+  $dayW: "";
+  $week-day: "mon", "tue", "wed", "thu", "fri", "sat","sun";
+
+  @for $i from 1 through 31 {
+    .calendar__day:nth-child(#{$i})::before {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      font-size: 30px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      @each $txt in $week-day {
+        $dayW: $txt;
+
+        content: "#{$dayW} #{$i}";
+
+      }
+
+
+    }
+
+  }
+
+  @for $days from 28 through 30 {
+    .calendar--month-length-#{$days} {
+      .calendar__day:nth-child(n + #{$days + 1}) {
+        display: none;
+
+      }
+    }
+  }
+
+}
+
+  .calendar__day {
+    position: relative;
+  width: 98px;
+  height: 98px;
+  border: 1px;
+  border-color: black;
+  background-color: #eee;
+  list-style-type: none;
+  transition-duration: 0.5s;
+
+
+  }
+
+
+  .calendar__day:hover {
+    cursor: pointer;
+    background-color: #FFBFCB;
+    transform: translateY(-20px);
+
+    $base-color: #036;
+
+  }
+
+
