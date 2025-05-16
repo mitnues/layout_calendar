@@ -27,14 +27,12 @@ body {
       left: 50%;
       transform: translate(-50%, -50%);
 
-      @each $txt in $week-day {
-        $dayW: $txt;
-
-        content: "#{$dayW} #{$i}";
-
       }
-
-
+       @each $txt in $week-day {
+        $dayW: $txt;
+        .calendar__day::before {
+          content: "#{$txt}";
+        }
     }
 
   }
