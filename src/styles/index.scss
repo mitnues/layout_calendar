@@ -13,7 +13,7 @@ body {
 
   $tile-size: 100px;
   $dayW: "";
-  $week-day: "mon", "tue", "wed", "thu", "fri", "sat","sun";
+  $week-day: "mon", "tue", "wed", "thu", "fri", "sat","sunday";
 
   @for $i from 1 through 31 {
     .calendar__day:nth-child(#{$i})::before {
