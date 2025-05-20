@@ -16,27 +16,26 @@ $tile-size: 100px;
 
     
     &__day:nth-child(#{$i})::before {
+       $i: $i + 1;
+
       position: absolute;
+      top: 50%;
 
       display: flex;
-
-      top: 50%;
       align-items: 50%;
-      
-      justify-content: center;
-
       content: "#{$i}";
-     
-      font-family: Arial, sans-serif;
+      justify-content: center;
      
       left: 50%;
       transform: translate(-50%, -50%);
 
+      font-family: Arial, sans-serif;
+     
       font-size: 30px;
      
     }  
 
-      $i: $i + 1;
+     
 
    }
 
