@@ -15,7 +15,7 @@ $tile-size: 100px;
   @for $i from 1 through 31 {
 
     
-    &__day:nth-child(#{$i})::before {
+    &:nth-child(#{$i})::before {
        $i: $i + 1;
 
       content: "#{$i}";
@@ -62,15 +62,15 @@ $tile-size: 100px;
   background-color: #eee;
   
   transition-duration: 0.5s;
-  
-  }
 
-  &__day:hover {
+  &:hover {
     cursor: pointer;
     transform: translateY(-20px);
     background-color: #FFBFCB;
     
 
+   }
+  
    }
 
   }
