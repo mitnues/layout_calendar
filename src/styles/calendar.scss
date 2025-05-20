@@ -19,17 +19,17 @@ $tile-size: 100px;
        $i: $i + 1;
 
       position: absolute;
-      top: 50%;
 
       content: "#{$i}";
+      top: 50%;
 
       display: flex;
-      align-items: 50%;
-      left: 50%;
 
-      justify-content: center;   
-      
+      left: 50%;
+      align-items: 50%;
       transform: translate(-50%, -50%);
+      
+      justify-content: center;        
 
       font-family: Arial, sans-serif;    
       font-size: 30px;
