@@ -4,12 +4,12 @@ $tile-size: 100px;
 
 .calendar {
   display: flex;
-  gap: 1px;
   flex-flow: wrap;
+  gap: 1px;
   align-items: flex-start;
+
   width: 700px;
   height: 400px;
-
   padding: 10px;
   
   @for $i from 1 through 31 {
@@ -17,20 +17,23 @@ $tile-size: 100px;
     
     &__day:nth-child(#{$i})::before {
       position: absolute;
+
       display: flex;
 
-      align-items: center;
       top: 50%;
+      align-items: 50%;
+      
       justify-content: center;
-     
-      font-family: Arial, sans-serif;
 
       content: "#{$i}";
-      left: 50%;
-      font-size: 30px;
      
+      font-family: Arial, sans-serif;
+     
+      left: 50%;
       transform: translate(-50%, -50%);
 
+      font-size: 30px;
+     
     }  
 
       $i: $i + 1;
@@ -55,6 +58,7 @@ $tile-size: 100px;
   height: 98px;
   border: 1px;
   border-color: black;
+
   list-style-type: none;
 
   background-color: #eee;
