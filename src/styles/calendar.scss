@@ -20,17 +20,14 @@ $tile-size: 100px;
 
       content: "#{$i}";
 
-      position: absolute;
-     
+      position: absolute;    
       top: 50%;
-       left: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
 
       display: flex;
-
-      transform: translate(-50%, -50%);
-     
-      align-items: 50%;     
-      
+   
+      align-items: 50%;          
       justify-content: center;        
 
       font-family: Arial, sans-serif;    
