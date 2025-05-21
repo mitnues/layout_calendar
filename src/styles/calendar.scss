@@ -7,7 +7,7 @@ $tile-size: 100px;
   flex-flow: wrap;
   gap: 1px;
   align-items: flex-start;
-
+  
   width: 700px;
   height: 400px;
   padding: 10px;
@@ -17,14 +17,14 @@ $tile-size: 100px;
     
        &__day:nth-child(#{$i})::before {
       content: "#{$i}";
-      
+
       position: absolute;    
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
 
       display: flex;
-      align-items: 50%;          
+      align-items: center;          
       justify-content: center;        
 
       font-family: Arial, sans-serif;    
@@ -49,11 +49,11 @@ $tile-size: 100px;
 
   &__day {
   position: relative;
+  align-items: center;
 
   width: 98px;
   height: 98px;
-  border: 1px;
-  border-color: black;
+  border: 1px solid black;
 
   list-style-type: none;
 
