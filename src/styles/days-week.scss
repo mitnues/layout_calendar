@@ -8,22 +8,20 @@ $week-day: (
      7: "Sun"
 );
 
-  .days-week {
-   
+  .days-week {  
      display: flex;
      flex-direction: row;
      justify-content: space-around;
 
      width: 600px;
      height: 20px; 
-
+     border: 1px solid black;
+     
      font-family: Arial, Helvetica, sans-serif;
      font-size: 16px;
     
           @each $index, $txt in $week-day {
-
           p:nth-child(#{$index})::before {
-
           content: "#{$txt}";
 
         }
