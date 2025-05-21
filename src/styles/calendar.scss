@@ -15,11 +15,8 @@ $tile-size: 100px;
   @for $i from 1 through 31 {
 
     
-    &:nth-child(#{$i})::before {
-       $i: $i + 1;
-
+       &__day:nth-child(#{$i})::before {
       content: "#{$i}";
-
       position: absolute;    
       top: 50%;
       left: 50%;
